@@ -1,0 +1,78 @@
+{
+	"info": {
+		"_postman_id": "320f3940-98ba-4fda-b0ae-884010a8d09d",
+		"name": "MC_CUSTOMER_STATISTICS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CREATE CLIENT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Lucero\",\r\n  \"fatherLastName\": \"Ampudia\",\r\n  \"motherLastName\": \"Trigoso\",\r\n  \"age\": 26,\r\n  \"dateOfBirth\": \"24/04/1995\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8020/clients/creacliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8020",
+					"path": [
+						"clients",
+						"creacliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST CLIENTS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8020/clients/listclientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8020",
+					"path": [
+						"clients",
+						"listclientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "KPI CLIENTS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8020/clients/kpideclientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8020",
+					"path": [
+						"clients",
+						"kpideclientes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

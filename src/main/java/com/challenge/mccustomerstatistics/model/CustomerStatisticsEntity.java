@@ -2,6 +2,7 @@ package com.challenge.mccustomerstatistics.model;
 
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -13,26 +14,27 @@ import java.util.Date;
 @Table(name = "customer")
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class CustomerStatisticsEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column(name = "Id")
     private Long id;
 
-    @Column(name = "Nombre")
+    @Column(name = "name")
     private String name;
 
-    @Column(name = "Apellido_Paterno")
-    private String ape_pat;
+    @Column(name = "fatherLastName")
+    private String fatherLastName;
 
-    @Column(name = "Apellido_Materno")
-    private String ape_mat;
+    @Column(name = "motherLastName")
+    private String motherLastName;
 
-    @Column(name = "Edad")
+    @Column(name = "age")
     private int age;
 
-//    @Column(name = "Fecha_Nacimiento")
-//      private Date Fec_Nacimiento;
+    @Column(name = "dateOfBirth")
+    private String dateOfBirth;
 
 }

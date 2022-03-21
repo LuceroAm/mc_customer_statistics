@@ -1,27 +1,31 @@
 package com.challenge.mccustomerstatistics.model.dto.request;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Builder;
 import lombok.Data;
-
-import javax.persistence.Column;
 import java.util.Date;
 
 @Data
+@Builder
+@ApiModel
 public class CustomerStatisticsRequest {
-    @Column(name = "id")
+
+    @ApiModelProperty(value = "id", required = true , position = 1)
     private Long id;
 
-    @Column(name = "Nombre")
+    @ApiModelProperty(value = "name", required = true , position = 2)
     private String name;
 
-    @Column(name = "Apellido_Paterno")
-    private String ape_pat;
+    @ApiModelProperty(value = "fatherLastName", required = true , position = 3)
+    private String fatherLastName;
 
-    @Column(name = "Apellido_Materno")
-    private String ape_mat;
+    @ApiModelProperty(value = "motherLastName", required = true , position = 4)
+    private String motherLastName;
 
-    @Column(name = "Edad")
+    @ApiModelProperty(value = "age", required = true , position = 5)
     private int age;
 
-    //    @Column(name = "Fecha_Nacimiento")
-//      private Date Fec_Nacimiento;
+    @ApiModelProperty(value = "dateOfBirth", required = true , position = 6)
+    private String dateOfBirth;
 }
