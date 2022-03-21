@@ -35,8 +35,8 @@ public class CustomerStatisticsController {
         return  customerStatisticsService.listClients();
     }
 
-    @GetMapping
-    @ApiOperation(value = Constants.KPI)
+    @GetMapping(Constants.KPI)
+    @ApiOperation(value = Constants.GET_KPI_VALUE)
     public Maybe<CustomerStatisticsKpiResponse> kpiAgeClients(){
         return customerStatisticsService.kpiAgeClients();
     }
