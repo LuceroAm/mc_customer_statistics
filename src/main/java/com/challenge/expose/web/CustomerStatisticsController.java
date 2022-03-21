@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping(Constants.MAIN_PATH)
 @Api(tags = "Microservice CustomerStatistics", description = "Esta API se encarga de la gestion de los Clientes")
 @Slf4j
